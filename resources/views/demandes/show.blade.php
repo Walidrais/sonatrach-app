@@ -1,116 +1,120 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8 shadow-xl rounded-xl">
                 <div class="card">
-                    <div class="card-header">Demande Details</div>
-
+                    <div class="card-header prose">
+                        <h2 class="mx-8 mt-6">Demande Details</h2>
+                    </div>
+                    <hr class="my-4">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <strong>Date:</strong> {{ $demande->date }}
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <strong class="text-lg font-weight-bold text-gray-700">Date:</strong>
+                                <p class="text-gray-900 prose">{{ $demande->date }}</p>
                             </div>
-                            <div class="col">
-                                <strong>Période:</strong> {{ $demande->periode }}
+                            <div class="col-md-6">
+                                <strong class="text-lg font-weight-bold text-gray-700">Période:</strong>
+                                <p class="text-gray-900 prose">{{ $demande->periode }}</p>
                             </div>
                         </div>
 
-                        <hr>
+                        <hr class="my-4">
 
-                        <div class="row">
-                            <div class="col">
-                                <strong>Chauffeurs:</strong>
-                                <div class="list-group mt-2">
-                                    @foreach ($demande->chauffeurs as $chauffeur)
-                                        <div class="list-group-item">
-                                            <h5 class="mb-1">{{ $chauffeur->nom }}</h5>
-                                            <p class="mb-1"><strong>Numéro de permis:</strong> {{ $chauffeur->num_id_permis }}</p>
-                                            <p class="mb-1"><strong>Date d'expiration du permis:</strong> {{ $chauffeur->date_exp_permis }}</p>
-                                        </div>
-                                    @endforeach
+                        <div class="mb-4">
+                            <strong class="text-lg font-bold">Chauffeur:</strong>
+                            @foreach ($demande->chauffeurs as $chauffeur)
+                            <div class="mt-2">
+                                <div class="border border-gray-300 rounded-lg p-4">
+                                    <p class="text-gray-900 font-semibold">{{ $chauffeur->nom }}</p>
+                                    <p class="text-gray-700"><strong>Numéro de permis:</strong> {{ $chauffeur->num_id_permis }}</p>
+                                    <p class="text-gray-700"><strong>Date d'expiration du permis:</strong> {{ $chauffeur->date_exp_permis }}</p>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <hr>
-                        <div class="row">
-                            <div class="col">
-                                <strong>Convoyeurs:</strong>
-                                <div class="list-group mt-2">
-                                    @foreach ($demande->convoyeurs as $convoyeur)
-                                        <div class="list-group-item">
-                                            <h5 class="mb-1">{{ $convoyeur->nom }}</h5>
-                                            <p class="mb-0"><strong>Numéro de carte d'identité:</strong> {{ $convoyeur->num_carte_id }}</p>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col">
-                                <strong>Camions:</strong>
-                                <div class="list-group mt-2">
-                                    @foreach ($demande->camions as $camion)
-                                        <div class="list-group-item">
-                                            <h5 class="mb-1">{{ $camion->matricule }}</h5>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col">
-                                <strong>Citernes:</strong>
-                                <div class="list-group mt-2">
-                                    @foreach ($demande->citernes as $citerne)
-                                        <div class="list-group-item">
-                                            <h5 class="mb-1">{{ $citerne->matricule }}</h5>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         
 
-                        <hr>
+                        <hr class="my-4">
 
-                        <div class="row">
-                            <div class="col">
-                                <strong>État:</strong>
-                                @if ($demande->etat === null)
-                                    En Attente
-                                @elseif ($demande->etat == 2)
-                                    Acceptée
-                                @elseif ($demande->etat == 1)
-                                    Refusée
-                                @endif
-                            </div>
+                        <div class="mb-4">
+                            <strong class="text-lg font-bold text-gray-700">Convoyeurs:</strong>
+                            <br>
+                            @foreach ($demande->convoyeurs as $convoyeur)
+                                <div class="mb-3">
+                                    <div class="border border-gray-300 rounded-lg p-4">
+                                        <p class="text-gray-900 font-semibold">{{ $convoyeur->nom }}</p>
+                                        <p class="text-gray-700"><strong>Numéro de carte d'identité:</strong> {{ $convoyeur->num_carte_id }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
+                        
+
+                        <hr class="my-4">
+
+                        <div class="mb-4">
+                            <strong class="text-lg font-bold text-gray-700">Camions:</strong>
+                            <br>
+                            @foreach ($demande->camions as $camion)
+                                <div class="mb-3">
+                                    <div class="border border-gray-300 rounded-lg p-4">
+                                        <p class="text-gray-900 font-semibold">{{ $camion->matricule }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        
+
+                        <hr class="my-4">
+
+                        <div class="mb-4">
+                            <strong class="text-lg font-bold text-gray-700">Citernes:</strong>
+                            <br>
+                            @foreach ($demande->citernes as $citerne)
+                                <div class="mb-3">
+                                    <div class="border border-gray-300 rounded-lg p-4">
+                                        <p class="text-gray-900 font-semibold">{{ $citerne->matricule }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        
+
+                        <hr class="my-4">
+
+                        <div class="mb-4">
+                            <strong class="text-lg font-weight-bold text-gray-700">État:</strong>
+                            @if ($demande->etat === null)
+                                <p class="text-primary font-weight-bold">En Attente</p>
+                            @elseif ($demande->etat == 2)
+                                <p class="text-green-600 font-weight-bold">Acceptée</p>
+                            @elseif ($demande->etat == 1)
+                                <p class="text-red-600 font-weight-bold">Refusée</p>
+                            @endif
+                        </div>
+
+                        @if (Auth::user()->role === 'chef_idc')
+                            
                         @if ($demande->etat === null)
-                        <hr>
+                        <hr class="my-4">
 
-                            <div class="row">
-                                <div class="col">
-                                    
-                                        <form action="{{ route('demandes.accept', $demande->id) }}" method="post" class="d-inline">
-                                            @csrf
-                                            @method('put')
-                                            <button type="submit" class="btn btn-success mr-2">Accepter</button>
-                                        </form>
-                                        <form action="{{ route('demandes.refuse', $demande->id) }}" method="post" class="d-inline">
-                                            @csrf
-                                            @method('put')
-                                            <button type="submit" class="btn btn-danger">Refuser</button>
-                                        </form>
-                                    
-                                </div>
-                            </div>
-                        @endif                     
+                        <div class="flex justify-end">
+                            <form action="{{ route('demandes.accept', $demande->id) }}" method="post" class="mr-2">
+                                @csrf
+                                @method('put')
+                                <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Accepter</button>
+                            </form>
+                            <form action="{{ route('demandes.refuse', $demande->id) }}" method="post">
+                                @csrf
+                                @method('put')
+                                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Refuser</button>
+                            </form>
                         </div>
+                        @endif
+                        @endif
                     </div>
                 </div>
             </div>

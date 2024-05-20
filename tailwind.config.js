@@ -5,6 +5,7 @@ import typography from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
+        './src/**/*.{html,js}',
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
@@ -19,5 +20,9 @@ export default {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography, require("daisyui"), require("@tailwindcss/typography")],
+
+    daisyui: {
+        themes: ["light", "dark", "cupcake", "lemonade", "nord", "fantasy"],
+      },
 };

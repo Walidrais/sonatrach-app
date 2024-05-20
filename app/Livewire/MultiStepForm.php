@@ -310,6 +310,8 @@ class MultiStepForm extends Component
             // Attach the newly created citerne to the demande
             $demande->citernes()->attach($citerne->id);
         }
+
+        return redirect()->route('demandes.index');
         
 
         //DB::commit();

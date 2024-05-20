@@ -39,7 +39,7 @@ class SearchAutorisation extends Component
     public $citerneMatricule;
 
 
-    public $selectedEntity = 'chauffeur'; // Default to chauffeurs initially
+    public $selectedEntity = 'chauffeurs'; // Default to chauffeurs initially
 
     public function render()
     {
