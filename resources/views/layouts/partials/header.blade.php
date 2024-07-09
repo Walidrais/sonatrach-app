@@ -8,17 +8,17 @@
                 @if (Auth::user()->role === 'chef_idc')
                 <div class="top-menu ml-10 flex space-x-6">
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-gray-50"
-                        href="http://127.0.0.1:8000">
+                        href="/">
                         Home
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/demandes">
+                        href="/demandes">
                         Demandes
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/autorisations/liste">
+                        href="/autorisations/liste">
                         Liste d'autorisations
                     </a>
                 
@@ -28,17 +28,17 @@
                 @elseif (Auth::user()->role === 'chef_complex')
                 <div class="top-menu ml-10 flex space-x-6">
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-gray-50"
-                        href="http://127.0.0.1:8000">
+                        href="">
                         Accueil
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/demandes/create">
+                        href="/demandes/create">
                         Creer une demande
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/demandes">
+                        href="/demandes">
                         Vos Demandes
                     </a>
                 
@@ -46,17 +46,17 @@
                 @elseif (Auth::user()->role === 'agent')
                 <div class="top-menu ml-10 flex space-x-6">
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-gray-50"
-                        href="http://127.0.0.1:8000">
+                        href="">
                         Acceuil
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/autorisation">
+                        href="/autorisation">
                         Créer une autorisation
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/autorisations/liste">
+                        href="/autorisations/liste">
                         Liste d'autorisations
                     </a>
                 
@@ -64,27 +64,27 @@
                 @else
                 <div class="top-menu ml-10 flex space-x-6">
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-gray-50"
-                        href="http://127.0.0.1:8000">
+                        href="">
                         Accueil
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/blog">
+                        href="/blog">
                         Blog
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/blog">
+                        href="/blog">
                         About Us
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/blog">
+                        href="/blog">
                         Contact Us
                     </a>
                 
                     <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                        href="http://127.0.0.1:8000/blog">
+                        href="/blog">
                         Terms
                     </a>
                 
@@ -94,27 +94,27 @@
         @unless (isset(Auth::user()->role))
             <div class="top-menu ml-10 flex space-x-6">
                 <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-gray-50"
-                    href="http://127.0.0.1:8000">
+                    href="">
                     Home
                 </a>
             
                 <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                    href="http://127.0.0.1:8000/blog">
+                    href="/blog">
                     Blog
                 </a>
             
                 <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                    href="http://127.0.0.1:8000/blog">
+                    href="/blog">
                     About Us
                 </a>
             
                 <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                    href="http://127.0.0.1:8000/blog">
+                    href="/blog">
                     Contact Us
                 </a>
             
                 <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                    href="http://127.0.0.1:8000/blog">
+                    href="/blog">
                     Terms
                 </a>
             
@@ -127,11 +127,11 @@
         @guest
         <div class="flex space-x-5">
             <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                href="http://127.0.0.1:8000/login">
+                href="/login">
                 Login
             </a>
             <a class="flex space-x-2 items-center hover:text-gray-50 text-sm text-primary-content"
-                href="http://127.0.0.1:8000/register">
+                href="/register">
                 Register
             </a>
         </div>

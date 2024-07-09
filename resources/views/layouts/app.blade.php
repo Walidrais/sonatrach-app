@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="autumn">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="autumn" class="h-full">
 
     <head>
         <meta charset="utf-8">
@@ -22,7 +22,7 @@
         @livewireStyles
     </head>
     
-    <body class="font-sans antialiased" 
+    <body class="font-sans antialiased flex flex-col min-h-screen" 
     
         
     @isset(Auth::user()->role)
