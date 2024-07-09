@@ -1,66 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1>Sonatrach Access</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
 
-## About Laravel
+Sonatrach Access is a web application developed to manage visitor access to the Arzew industrial zone, aiming to automate and secure the process of issuing temporary permits. The development process focused on leveraging current web technologies and best practices to create a robust, responsive, and user-friendly application.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Technologies Used
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<ul>
+    <li><b>Laravel:</b> A powerful and flexible PHP framework providing a solid structure for web application development.</li>
+    <li><b>Livewire:</b> A PHP library enabling real-time, interactive user interfaces without writing JavaScript.</li>
+    <li><b>Tailwind CSS:</b> A utility-first CSS framework for building elegant and responsive user interfaces.</li>
+    <li><b>DaisyUI:</b> A Tailwind CSS extension offering a collection of ready-to-use components for faster development.</li>
+    <li><b>MySQL:</b> A widely-used open-source relational database management system.</li>
+    <li><b>Eloquent ORM:</b> Laravel’s built-in object-relational mapping system, simplifying data manipulation.</li>
+    <li><b>PHPMyAdmin:</b> A web-based interface for managing MySQL database operations.</li>
+    <li><b>Visual Studio Code:</b> A lightweight, powerful source code editor with numerous features and extensions for an optimized development experience.</li>
+</ul>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Application Architecture
 
-## Learning Laravel
+The application follows the MVC (Model-View-Controller) architecture using Laravel, facilitating clear separation of responsibilities, ease of maintenance, and scalability.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Key Components
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Model: Manages business logic, data manipulation, and rules, using Eloquent ORM for MySQL database interactions.
+- View: Handles the user interface, displaying data and enabling user interactions, using Blade templates for dynamic and reusable views.
+- Controller: Acts as an intermediary between the model and the view, processing user requests, performing operations, and updating the view accordingly.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Key Features
 
-## Laravel Sponsors
+### For Complex Chiefs:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Create access requests for drivers, escorts, trucks, and tankers quickly and easily.
+- View approved or rejected requests via the application.
 
-### Premium Partners
+### For IDC Chiefs:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- Centralized management of all requests on the platform, providing complete control over the process.
+- Fast validation and approval of access requests to ensure smooth operations.
 
-## Contributing
+### For Agents:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Manage authorizations and print documents to ensure smooth and secure access.
+- Advanced search functionalities for quick access to relevant information.
 
-## Code of Conduct
+## Impact on the Company
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Reduced Wait Times: Online submission of access requests significantly reduces queues at the industrial zone entrance.
+- Enhanced Security: Automated authorization processes ensure only approved visitors gain access, improving overall security.
+- Streamlined Administrative Processes: Digital processes replace traditional paper-based methods, freeing up administrative teams to focus on strategic tasks.
 
-## Security Vulnerabilities
+## Security Measures
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- CSRF Protection: Prevents cross-site request forgery attacks, ensuring all actions are legitimate and authorized.
+- Secure Authentication: Robust authentication mechanisms with Jetstream for secure user and session management.
+- Data Encryption: Encrypts sensitive data in the database, ensuring data integrity and security.
+- Authorization Management: Allows precise definition of user access privileges based on roles and responsibilities.
 
-## License
+## User Interface
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Login and Registration Pages: User-friendly and intuitive interfaces for entering credentials and creating accounts, with real-time validation and password recovery options.
+- User Profile Page: Central hub for managing personal information, changing passwords, managing browser sessions, and deleting accounts.
+- Request Creation Page: Intuitive form for entering request details, ensuring accuracy through real-time validation.
+- Request Consultation Page: Summary table of requests with essential details and action buttons for quick review and decision-making.
+- Request Details Page: Detailed information on specific requests, with action buttons for approval or rejection.
+- Authorization List Page: Overview of existing authorizations with relevant information.
+- Authorization Creation Page: User-friendly form for creating new authorizations, linking them to corresponding requests.
+- Authorization Details Page: Detailed information on specific authorizations, with the option to print as a PDF.
